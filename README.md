@@ -39,7 +39,7 @@ The system models how modern banking platforms process money movement while ensu
   - Who performed the action
   - What action occurred
   - Which entity was affected
-  - Timestamp and IP address
+  - Timestamp 
 - Designed for compliance and traceability
 
 ### 🔐 Security
@@ -111,17 +111,30 @@ References are:
 
 ### Create Account
 
-POST /api/accounts
-Authorization: Bearer {token}
+**POST** `/api/accounts`
+#### Request Body
+```json
+{
+    
+    "accountType": "Savings",
+    "amount": "10000"
+}
 
 ### Transfer Funds
 
-POST /api/transfers
+**POST** `/api/transfers`
 Authorization: Bearer {token}
+```json
+
+    
+    "SourceAccountNumber": "9098765432",
+    "DestinationAccountNumber": "9041107824",
+    "amount": "1000"
+}
 
 ### Get Account Statement
 
-GET /api/accounts/{accountNumber}/statement?from=2026-01-01&to=2026-01-31
+**GET** `/api/accounts/{accountNumber}/statement?from=2026-01-01&to=2026-01-31`
 Authorization: Bearer {token}
 
 ## What This Project Demonstrates

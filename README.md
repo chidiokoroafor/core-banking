@@ -119,7 +119,7 @@ References are:
     "accountType": "Savings",
     "amount": "10000"
 }
-
+```
 ### Transfer Funds
 
 **POST** `/api/transfers`
@@ -131,7 +131,7 @@ Authorization: Bearer {token}
     "DestinationAccountNumber": "9041107824",
     "amount": "1000"
 }
-
+```
 ### Get Account Statement
 
 **GET** `/api/accounts/{accountNumber}/statement?from=2026-01-01&to=2026-01-31`
